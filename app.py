@@ -70,3 +70,10 @@ def add_location():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    import os
+
+if __name__ == '__main__':
+    # Flask écoute sur 0.0.0.0 pour être accessible publiquement
+    port = int(os.environ.get('PORT', 5000))  # Utilise le port spécifié ou le port 5000 par défaut
+    app.run(host='0.0.0.0', port=port, debug=True)
+
