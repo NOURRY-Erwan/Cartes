@@ -70,10 +70,12 @@ def add_location():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    import os
+
+import os
 
 if __name__ == '__main__':
+    # Utiliser le port spécifié par Render ou 5000 par défaut
+    port = int(os.environ.get('PORT', 5000))
     # Flask écoute sur 0.0.0.0 pour être accessible publiquement
-    port = int(os.environ.get('PORT', 5000))  # Utilise le port spécifié ou le port 5000 par défaut
     app.run(host='0.0.0.0', port=port, debug=True)
 
